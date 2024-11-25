@@ -1,0 +1,48 @@
+p#goal-string, textarea {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    margin: 0px;
+    width: 80%;
+    padding: 10px;
+}
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+#timer {
+    padding-left: 10px;
+}
+
+table {
+    display: none;
+    border-collapse: collapse;
+    /* border: 2px solid black; */
+    width: fit-content;
+    /* letter-spacing: 1px; */
+  }
+  
+td, th {
+border: 1px solid rgb(190,190,190);
+padding: 5px 5px;
+}
+
+th {
+background-color: rgb(235,235,235);
+font-size: 1.2rem;
+}
+
+td {
+text-align: center;
+}
+  
+caption {
+    font-size: 1.2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+
+}
+
+.error-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: red;
+    font-size: 0.8rem;
+}

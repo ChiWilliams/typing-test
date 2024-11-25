@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="styling.css"></style>
+</head>
+<body>
+    <br> <br> <br>
+    <h1>Typing test!</h1>
+    <p id="timer"><b>Timer:</b> 0</p>
+    <p id="goal-string">The quick brown fox jumped over the lazy dog.</p>
+    <textarea
+    rows = 100
+    cols = 100></textarea>
+    <h2 id="you-won" style="display:none;">GOOD JOB YOU WON!!</h2>
+    <table id="leaderboard">
+        <caption>High Scores</caption>
+        <tr>
+            <th>Name</th>
+            <th>Time</th>
+        </tr>
+
+    </table>
+
+    <dialog id="get-name">Congrats, you won! Enter your name for a high score!
+        <div id="name-entry">
+            <label for="name-input">Your name:</label>
+            <input id="name-input"></input>
+            <div id="validation-message" class="error-text"></div>
+        </div>
+    </dialog>
+    
+
+<script src = "bad-keyboard.js", type="module"></script>
+</body>
