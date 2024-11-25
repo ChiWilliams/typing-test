@@ -45,8 +45,7 @@ textArea.addEventListener('keydown', async e => {
 //it wouldn't be fun if the user can just paste their input
 //so being evil, we prevent them from doing so ...
 addEventListener("paste", (e) => {
-    e.preventDefault();
-    console.log("Don't try to paste ...")
+    //e.preventDefault();
 });
 
 //check for win condition
