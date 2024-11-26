@@ -7,4 +7,4 @@ RUN pip install -r requirements.txt
 
 ADD . /code
 
-CMD ["python", "backend/main.py"]
+CMD ["python", "main.py"]
