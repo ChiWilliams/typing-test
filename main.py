@@ -41,8 +41,8 @@ origins = [
     "http://localhost",
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-    "http://localhost:8000",
-    "http://127.0.0.1:8000"
+    "http://localhost:8080",
+    "http://127.0.0.1:8080"
 ]
 
 
@@ -101,5 +101,4 @@ async def set_new_score(score: LeaderboardEntry) -> None:
 #     pass
 import uvicorn
 if __name__ == "__main__":
-    print("This happened")
-    uvicorn.run("main:app", host="0.0.0.0", port=8000) 
+    uvicorn.run("main:app", host="0.0.0.0", port=8080) 
