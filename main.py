@@ -101,4 +101,5 @@ async def set_new_score(score: LeaderboardEntry) -> None:
 #     pass
 import uvicorn
 if __name__ == "__main__":
+    print("This happened")
     uvicorn.run("main:app", host="0.0.0.0", port=8000) 

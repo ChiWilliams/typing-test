@@ -1,4 +1,4 @@
-FROM python:3.12.7
+FROM python:3.12.1
 
 # docker will not re-pip install if requirements.txt doesn't change
 WORKDIR /code
