@@ -144,7 +144,7 @@ function setNewScore(name, time) {
 
 
 async function callAPI(path, method='GET', body=null) {
-  const url = `http://localhost:8080/${path}`;
+  const url = `http://web:8080/${path}`;
   const baseOptions = {
     method: method,
     headers: {
