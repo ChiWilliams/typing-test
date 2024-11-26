@@ -1,5 +1,7 @@
 from typing import Annotated
 from fastapi import FastAPI, HTTPException, Depends
+from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from contextlib import asynccontextmanager
@@ -8,6 +10,7 @@ import re
 from sqlmodel import SQLModel, Field, Session, create_engine, select
 
 class LeaderboardEntry(SQLModel, table = True):
+    __table_args__ = {'extend_existing': True}
     id: int | None = Field(default=None, primary_key=True)
     name: str
     time: int
@@ -38,7 +41,8 @@ origins = [
     "http://localhost",
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-    "http://0.0.0.0/8000"
+    "http://localhost:8000",
+    "http://127.0.0.1:8000"
 ]
 
 
@@ -49,6 +53,15 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
+@app.get("/", response_class = HTMLResponse)
+async def home():
+    with open("template/index.html", "r") as f:
+        html_content = f.read()
+    return html_content
+
 
 @app.get("/get_high_scores")
 async def get_high_score(
@@ -86,7 +99,6 @@ async def set_new_score(score: LeaderboardEntry) -> None:
 #     #rewrite as SQL clear the table
 #     # clear db
 #     pass
-
 import uvicorn
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port=8080, reload=True) 
+    uvicorn.run("main:app", host="0.0.0.0", port=8000) 
