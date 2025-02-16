@@ -57,6 +57,11 @@ To serve it yourself, follow the disco instructions in their [docs](https://docs
 * The SQL database containing the leaderboard periodically wipes itself. I will fix this!
 * It's currently possible to cheat on the typing test :(. There are several approaches to take to prevent this, which I may take up in the future.
 
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+Parts of this project (including disco.json configuration and server setup) were adapted from the [Disco example flask server](https://github.com/letsdiscodev/example-flask-site), which is also MIT licensed.
+
 ## Acknowledgments
 Thanks to Greg Sadetsky for answering my questions about disco!
 
